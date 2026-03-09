@@ -8,10 +8,8 @@
 2. Models & Repositories
 แต่ละ model มี toMap() / fromMap() สำหรับแปลงข้อมูลไป-กลับ SQLite และมี copyWith() สำหรับอัปเดตบางฟิลด์ โดย Repository แต่ละตัวรับผิดชอบ CRUD ของตารางตัวเอง ทั้งนี้ CategoryRepository จะป้องกันการลบ Category ที่มี Event ใช้งานอยู่
 3. Providers (State Management)
-
 CategoryProvider โหลด Category จาก DB ตอนเริ่มต้น และ refresh หลังทุก CRUD
 EventProvider จัดการ Event ทั้งหมด พร้อม filter (ค้นหา, วันที่, ประเภท, สถานะ) และ sort (ตามเวลาเริ่ม หรือล่าสุดอัปเดต) เมื่อเปลี่ยน status เป็น completed/cancelled จะปิด Reminder อัตโนมัติ
-
 4. หน้าจอหลัก
 หน้าจอหน้าที่ActivityListScreenแสดงรายการ Event พร้อม Filter Bar และสี 
 CategoryAddEditEventScreenForm เพิ่ม/แก้ไข Event พร้อม validate เวลา
